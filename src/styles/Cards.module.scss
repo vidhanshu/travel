@@ -1,0 +1,17 @@
+.cards_container {
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+}
+
+@media (min-width: 700px) {
+    .cards_container {
+        padding: 20px 30px;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+    }
+}
