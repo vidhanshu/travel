@@ -19,7 +19,7 @@ function Button({
   const checkBtnSize = SIZE.includes(buttonSize) ? buttonSize : SIZE[0];
 
   return (
-    <Link to={path}>
+    <a href={"#explore"}>
       <button
         className={`btn ${checkBtnStyle} ${checkBtnSize} ${className}`}
         onClick={onclick}
@@ -27,7 +27,7 @@ function Button({
       >
         {children}
       </button>
-    </Link>
+    </a>
   );
 }
 

@@ -1,18 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "../styles/CardItems.module.scss";
+import ImageOverlay from "./ImageOverlay";
 function CardItem({ to, img, heading, label }) {
+  const [overlay, setOverlay] = React.useState(false);
   return (
-    <div className={style.card_container}>
-      <Link to="/" to={to}>
+    <>
+      {overlay ? (
+        <ImageOverlay
+          onClick={() => {
+            setOverlay(false);
+          }}
+          img={img}
+        />
+      ) : null}
+      <div className={style.card_container}>
         <figure className={style.card_item_pic} label={label}>
-          <img src={img} alt="Travel image" />
+          <img
+            onClick={() => {
+              setOverlay(true);
+            }}
+            src={img}
+            alt="Travel image"
+          />
+          <Link to="/" to={to}>
+            <button>{label}</button>
+          </Link>
         </figure>
-      </Link>
-      <div className={style.card_content}>
-        <h6>{heading}</h6>
+        <div className={style.card_content}>
+          <h6>{heading}</h6>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

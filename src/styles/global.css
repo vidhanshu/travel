@@ -4,6 +4,15 @@
     --transition: all .3s ease-out;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: rgb(0, 174, 255);
+    color: white;
+}
+
 .btn {
     border: 1px solid red;
     cursor: pointer;

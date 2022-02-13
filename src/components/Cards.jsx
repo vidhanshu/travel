@@ -7,6 +7,7 @@ function Cards() {
     <>
       <div style={{ width: "100%" }}>
         <h1
+          id="explore"
           style={{
             margin: "30px 0px",
             fontSize: "40px",

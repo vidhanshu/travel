@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import vid from "../assets/video-2.mp4";
+import vid from "../assets/video-1.mp4";
 import style from "../styles/HeroSection.module.scss";
 function HeroSection() {
   return (
